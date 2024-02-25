@@ -1,3 +1,4 @@
+![](images/iot.png)
 This is low-level implementation of IOT device fleet management system.
 
 Satisfies the following requirements:
