@@ -3,6 +3,8 @@ from internal.constants.enums import DeviceStatus
 
 
 class DeviceBaseClass(ABC):
+    """DeviceBaseClass is an abstract class for iot device"""
+
     def __init__(self, device_id, device_name, device_type, device_metadata):
         self.id = device_id
         self.name = device_name

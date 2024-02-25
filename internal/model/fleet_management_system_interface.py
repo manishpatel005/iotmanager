@@ -4,6 +4,8 @@ from typing import List
 
 
 class FleetManagementSystemInterface(ABC):
+    """Interface for iot device fleet management system"""
+
     def __init__(self):
         pass
 
@@ -16,9 +18,17 @@ class FleetManagementSystemInterface(ABC):
         raise NotImplementedError()
 
     @abstractmethod
-    def sendCommand(self, devices: List[DeviceBaseClass], command):
+    def sendCommand(self, device_ids: List[str], command):
         raise NotImplementedError()
 
     @abstractmethod
-    def getData(self, devices: List[DeviceBaseClass], options):
+    def fetchData(self, device_ids: List[str], options):
+        raise NotImplementedError()
+
+    @abstractmethod
+    def queryData(self, device_options):
+        raise NotImplementedError()
+    
+    @abstractmethod
+    def pushData(self, device_id, values):
         raise NotImplementedError()
